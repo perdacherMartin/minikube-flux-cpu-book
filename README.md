@@ -1,5 +1,7 @@
 # Sample Application Deployment
 
+> This is a sample application from the book "GitOps and Kubernetes Continuous Deployment with Argo CD, Jenkins X, and Flux" by Billy Yuen, Alexander Matyushentsev, Todd Ekenstam, and Jesse Suen
+
 The repository contains Kubernetes manifests that defines the deployment of the
 [sample application](https://github.com/gitopsbook/sample-app).
 
