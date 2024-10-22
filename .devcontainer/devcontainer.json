@@ -1,0 +1,44 @@
+{
+    "name": "flux-minikube-cpu-book",
+    "dockerComposeFile": "docker-compose.yaml", // configuration will be overriden last one wins
+    "service": "flux",
+    "workspaceFolder": "/workspaces",
+  
+    "features": {
+      "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+			  "version": "latest",
+			  "helm": "latest",
+			  "minikube": "latest"
+      },
+      "ghcr.io/devcontainers/features/docker-in-docker:2": {
+        "version": "latest"
+      }
+    },
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+			},
+
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+                "hashicorp.terraform",
+                "GitHub.vscode-pull-request-github",
+                "ms-vscode.makefile-tools",
+                "ms-kubernetes-tools.vscode-kubernetes-tools",
+                "ipedrazas.kubernetes-snippets",
+                "Weaveworks.vscode-gitops-tools",
+                "ms-azuretools.vscode-docker"
+            ]
+		}
+	},    
+//  "postStartCommand": "post-start",
+//  "postCreateCommand": ["virtualenv", "/workspaces/.venv"],
+  "remoteUser": "vscode"
+  //  "mounts": [
+  //    "source=${localWorkspaceFolder}/tf_aws_s3_rekognize/.bashrc,target=/home/vscode/.bashrc"
+  //  ]
+  }
