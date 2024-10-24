@@ -7,7 +7,7 @@ init:
 	flux check --pre
 
 bootstrap:
-	echo "$(GITHUB_TOKEN)" | flux bootstrap github --token-auth --owner=$(GITHUB_USER) --repository=minikube-flux-cpu-book --branch=master --path=. --personal
+	echo "$(GITHUB_TOKEN)" | flux bootstrap github --token-auth --owner=$(GITHUB_USER) --repository=minikube-flux-cpu-book --branch=master --path=./clusters/dev --personal
 
 stop:
 	minikube stop
